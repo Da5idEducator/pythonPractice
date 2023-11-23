@@ -40,5 +40,3 @@ print("A leghosszabb sorozat:", maximumLepes, " lepesbol allt.")
 print("Leghosszabb sorozat a:", maximumLepesSzamuSzam, "szamhoz tartozott")
 print("Az elért legmagasabb szám:", elertLegmagasabbSzam)
 print("Az elért legmagasabb számhoz tartozó kiinduló érték:", elertLegmagasabbSzamhozTartozoVizsgaltSzam)
-
-        
