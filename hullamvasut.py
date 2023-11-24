@@ -24,10 +24,10 @@ for szamlalo in range (2, hatarertek):
         else:
             szam = int((szam * 3) + 1)
             lepesek = lepesek + 1
-            if szam > elertLegmagasabbSzam:
-                elertLegmagasabbSzam = szam
-                elertLegmagasabbSzamhozTartozoVizsgaltSzam = vizsgaltSzam
-                print("Új legmagasabb elért szám:", elertLegmagasabbSzam, "a vizsgalt szam:", vizsgaltSzam)
+        if szam > elertLegmagasabbSzam:
+            elertLegmagasabbSzam = szam
+            elertLegmagasabbSzamhozTartozoVizsgaltSzam = vizsgaltSzam
+            print("Új legmagasabb elért szám:", elertLegmagasabbSzam, "a vizsgalt szam:", vizsgaltSzam)
             # print(szam)
         
         if lepesek > maximumLepes:
