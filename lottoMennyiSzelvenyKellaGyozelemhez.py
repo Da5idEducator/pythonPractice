@@ -4,6 +4,7 @@ import random
 lottoGomb = []
 kihuzottSzamok = []
 tipp = []
+talalatok = [0, 0, 0, 0]
 fonyeremeny = 3100000000
 lottoszelvenyAra = 400
 counter = 0
@@ -32,6 +33,20 @@ while True:
     #print(kihuzottSzamok)
     if counter % 500000 == 0:
         print("Szamlalo:", counter, "tipp:", tipp, "kihuzott:", kihuzottSzamok)
+        print("Eddigi találatok száma:", talalatok)
+        
+    kozosElemek = (set(tipp) & set(kihuzottSzamok))
+    kozosElemekSzama = len(kozosElemek)
+    
+    if kozosElemekSzama > 0:
+        if kozosElemekSzama == 1:
+            talalatok[0] = talalatok[0] + 1
+        elif kozosElemekSzama == 2:
+            talalatok[1] = talalatok[1] + 1
+        elif kozosElemekSzama == 3:
+            talalatok[2] = talalatok[2] + 1
+        elif kozosElemekSzama == 4:
+            talalatok[3] = talalatok[3] + 1
     
     if kihuzottSzamok == tipp:
         break
@@ -45,3 +60,7 @@ print("A megvásárolt lottószelvények száma: ", counter)
 print("A szelvényekre költött összeg:", elkoltottPenz)
 print("A lottó főnyereménye:", fonyeremeny)
 print("Az ön nyeresége:", nyereseg)
+print("Egytalálatos szelvények:", talalatok[0], "db.")
+print("Két találatos szelvények:", talalatok[1], "db.")
+print("Három találatos szelvények:", talalatok[2], "db.")
+print("Négy találatos szelvények:", talalatok[3], "db.")
