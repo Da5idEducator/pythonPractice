@@ -32,8 +32,10 @@ while True:
     kihuzottSzamok.sort()
     #print(kihuzottSzamok)
     if counter % 500000 == 0:
-        print("Szamlalo:", counter, "tipp:", tipp, "kihuzott:", kihuzottSzamok)
-        print("Eddigi találatok száma:", talalatok)
+        print("Sorsolások száma:", counter) 
+        print("Megjátszott szelvény (tipp):", tipp)
+        print("Utoljára kihúzott szelvény:", kihuzottSzamok)
+        print("Eddigi találatok száma [egytalálatos, kéttalálatos ...]:", talalatok)
         
     kozosElemek = (set(tipp) & set(kihuzottSzamok))
     kozosElemekSzama = len(kozosElemek)
